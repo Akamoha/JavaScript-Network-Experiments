@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" />
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<meta charset=utf-8 />
+	<title>vis.js Experiment</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script type = "text/javascript" src="vis/dist/vis.js"></script>
+	<script src="code.js"></script>
+</head>
+<body>
+
+    <div id = "top-bar">vis.js Experiment</div>
+    <div id = "mynetwork"></div>
+
+</body>
+</html>
