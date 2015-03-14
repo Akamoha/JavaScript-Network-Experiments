@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" />
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	<meta charset=utf-8 />
+	<title>Cytoscape Experiment</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/cytoscape.min.js"></script>
+	<script src="code.js"></script>
+</head>
+<body>
+
+    <div id = "top-bar">Cytoscape Experiment</div>
+    <div id = "cy"></div>
+
+</body>
+</html>
