@@ -6,3 +6,8 @@ Basic skeleton code for experimenting with JavaScript network libraries:
 
 The positions of nodes are randomly generated.
 
+Also tried using a vector graphics library:
+
+Raphael.js (http://raphaeljs.com/)
+
+This code takes the input from a .txt file containing the coordinates of each node.
