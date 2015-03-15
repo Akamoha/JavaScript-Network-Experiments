@@ -5,8 +5,8 @@ $(document).ready(function() {
 	{
 		this.paper = paper;
 		this.nodes = {};
-		this.node_radius = node_radius || 1;
-		this.node_style = node_style || { fill: 'white', stroke: 'black', 'stroke-width': 2 };
+		this.node_radius = node_radius || 2;
+		this.node_style = node_style || { fill: 'white', stroke: 'black', 'stroke-width': 1.5 };
 		this.label_style = label_style || { fill: 'black', stroke: 'none', 'font-family': 'Arial,Helvetica,sans-serif', 'font-size': 32, 'font-weight': 600 };
 	}
 
@@ -22,20 +22,12 @@ $(document).ready(function() {
 				};
 	}
 		
-	NodeManager.prototype.connectNodes = function connectNodes(code1, code2)
+	NodeManager.prototype.connectNodes = function connectNodes(startX, startY, endX, endY)
 	{   
-			var angle = Math.atan2(this.nodes[code2].y - this.nodes[code1].y, this.nodes[code2].x - this.nodes[code1].x );      //  this will be the angle from point to point
-			var inverse_angle = angle + Math.PI;
-
-			ox1 = this.nodes[code1].x + Math.cos( angle ) * this.nodes[code1].r;
-			oy1 = this.nodes[code1].y + Math.sin( angle ) * this.nodes[code1].r;
-
-			ox2 = this.nodes[code2].x + Math.cos( inverse_angle ) * this.nodes[code2].r;
-			oy2 = this.nodes[code2].y + Math.sin( inverse_angle ) * this.nodes[code2].r;
-
-			var pathstr = "M" + ox1 + "," + oy1 + " L" + ox2 + "," + oy2;
-	 
-			var path = this.paper.path(pathstr).attr(this.node_style );
+			var line = paper.path( ["M", startX, startY, "L", endX, endY ] );
+			line.attr("stroke-width", "0.1");
+			line.attr("opacity", 0.1);
+			line.translate(0.1, 0.1);
 	}
 	
 	function randomIntFromInterval(min,max)
@@ -44,10 +36,9 @@ $(document).ready(function() {
 	}
 	
 	var nodeMgr = new NodeManager(paper);
-	//nodeMgr.connectNodes( 'origin', '1' );
 
-	var N = 40;
-	var E = 150;
+	var N = 7000;//43735;
+	var E = 50000;//125462;
 	
 	var LY = 5;
 	var LY1 = 10;
@@ -67,15 +58,19 @@ $(document).ready(function() {
 		nodeMgr.addNode("o", x, y);
 	}
  
-	/*for(i = 0; i < E; i++) {
-	  var sourceNum = Math.floor(Math.random() * N);
-	  var targetNum = Math.floor(Math.random() * N);
-	  var edge = {
-		group: "edges",
-		data: {
-		  source: "n"+sourceNum.toString(),
-		  target: "n"+targetNum.toString()
-		}
-	  };
-	}*/
+	var mydata = JSON.parse(data2);
+
+	for(i = 0; i < E; i++) {
+		var givenStartX = mydata[i].sx;
+		var givenStartY = mydata[i].sy;
+		var startX = (givenStartX - LX)/RX + LX1;
+		var startY = (givenStartY - LY)/RY + LY1;
+		
+		var givenEndX = mydata[i].ex;
+		var givenEndY = mydata[i].ey;
+		var endX = (givenEndX - LX)/RX + LX1;
+		var endY = (givenEndY - LY)/RY + LY1;
+		
+		nodeMgr.connectNodes(startX, startY, endX, endY);
+	}
 });
