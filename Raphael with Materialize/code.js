@@ -45,10 +45,22 @@ $(document).ready(function() {
 		return Math.floor(Math.random()*(max-min+1)+min);
 	}
 	
+	$("#normalRedraw").bind('click', function () { 
+		alert('Normal Graph Redraw Clicked'); 
+	});
+	
+	$("#bipartiteRedraw").bind('click', function () { 
+		alert('Bipartite Graph Redraw Clicked'); 
+	});
+	
+	$("#ascentricRedraw").bind('click', function () {
+		alert('AS-Centric Graph Redraw Clicked'); 
+	});
+	
 	var nodeMgr = new NodeManager(paper);
 
-	var N = 5000//43735;
-	var E = 10000;//125462;
+	var N = 1000//43735;
+	var E = 2000;//125462;
 	var XOFFSET = 300;
 	var YOFFSET = 40;
 		
