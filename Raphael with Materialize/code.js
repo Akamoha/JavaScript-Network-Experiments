@@ -5,10 +5,26 @@ $(document).ready(function() {
 		closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor);
 	});
 	
-	
 	$('select').material_select();
 	
-	var paper = Raphael("container", "100%", "150%");
+	var container = $("#container");
+	
+	var paper = Raphael('container', container.width(), container.height());
+	
+	var panZoom = paper.panzoom({ initialZoom: 1, initialPosition: { x: 100, y: 0} });
+    
+    panZoom.enable();
+    paper.safari();
+	
+	$("#container #up").click(function (e) {
+        panZoom.zoomIn(1);
+        e.preventDefault();
+    });
+
+    $("#container #down").click(function (e) {
+        panZoom.zoomOut(1);
+        e.preventDefault();
+    });
 	
 	function NodeManager( paper, node_radius, node_style, label_style )
 	{
@@ -62,7 +78,7 @@ $(document).ready(function() {
 	var N = 1000//43735;
 	var E = 2000;//125462;
 	var XOFFSET = 300;
-	var YOFFSET = 40;
+	var YOFFSET = 75;
 		
 	var LY = 5;
 	var LY1 = 10;
