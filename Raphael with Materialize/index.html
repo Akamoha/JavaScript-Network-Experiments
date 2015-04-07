@@ -6,6 +6,7 @@
 
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link type="text/css" rel="stylesheet" href="style.css">
+  <link type="text/css" rel="stylesheet" href="src/raphael.pan-zoom.css">
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <meta charset=utf-8 />
 
@@ -18,6 +19,7 @@
   <script type="text/javascript" src="nodes.json"></script>
   <script type="text/javascript" src="edges.json"></script>
   <script src="js/raphael-min.js"></script>
+  <script src="src/raphael.pan-zoom.js"></script>
 
   <div class = "topbarcont">
 	<div class="topbar">Raphael.js Experiment</div>
@@ -33,7 +35,7 @@
 	<li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
-          <div class = "panel-element">
+          <div class = "panel-element number1">
 			  <a class="collapsible-header">Normal Graph</a>
 			  <div class="collapsible-body">
 				<div class="row">
@@ -138,7 +140,9 @@
 	</li>
   </ul>
 
-  <div id = "container"></div>
+  <div id = "container">
+	<div id="mapControls"><a id="up" href="javascript:;"></a><a id="down" href="javascript:;"></a></div>
+  </div>
   
 </body>
 </html>
