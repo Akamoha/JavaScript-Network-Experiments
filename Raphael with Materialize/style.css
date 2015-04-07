@@ -16,7 +16,8 @@
 }
 
 .topbarcont {
-	position: inline-table;
+	z-index: 1000;
+	position: fixed;
 	width: 100%;
 	background-color: #2288EE;
 }
@@ -28,12 +29,17 @@
 .panel-element {
 	margin-top: 10px;
 	padding: 15px;
+	z-index: 1001;
 }
 
 .row {
 	padding: 0px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.number1 {
+	margin-top: 15%;
 }
 
 .collapsible-header {
@@ -69,3 +75,12 @@
 .mdi-action-autorenew {
 	color: white;
 }
+
+#container {
+	width: 100%;
+	height: 165%;
+}
+
+#container #mapControls { position: fixed; bottom: 15px; right: 15px; width: 29px; }
+#container #mapControls #up { background: url(iconUp.png) no-repeat center top; display: block; height: 26px; width: 29px; }
+#container #mapControls #down { background: url(iconDown.png) no-repeat center top; display: block; height: 27px; width: 29px; }
