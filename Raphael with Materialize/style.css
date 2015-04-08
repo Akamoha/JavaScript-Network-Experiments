@@ -30,6 +30,20 @@
 	margin-top: 10px;
 	padding: 15px;
 	z-index: 1001;
+	background-color: #E5E4E2;
+	-webkit-transition-property:#E5E4E2;
+	-webkit-transition-duration: 0.2s, 0.2s;
+	-webkit-transition-timing-function: linear, ease-in;
+	-moz-transition-property:#E5E4E2;
+	-moz-transition-duration:1s;
+	-moz-transition-timing-function: linear, ease-in;
+	-o-transition-property:#E5E4E2;
+	-o-transition-duration:0.2s;
+	-o-transition-timing-function: linear, ease-in;
+}
+
+.panel-element:hover {
+	background-color: #D1D0CE;
 }
 
 .row {
@@ -39,7 +53,7 @@
 }
 
 .number1 {
-	margin-top: 15%;
+	margin-top: 20%;
 }
 
 .collapsible-header {
@@ -81,6 +95,207 @@
 	height: 165%;
 }
 
-#container #mapControls { position: fixed; bottom: 15px; right: 15px; width: 29px; }
+.snapshotDropdown {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-container {
+	width: 8%;
+	height: 20%;
+	position: fixed;
+	bottom: 10px;
+	right: 30px;
+}
+
+.row1 {
+	height: 33%;
+	text-align: center;
+}
+
+.r1c1 {
+	display: inline-block;
+	width: 34%;
+	float: left;
+	height: 100%;
+	position: relative;
+}
+
+.ATL {
+	height: 90%;
+	width: 100%;
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.r1c2 {
+	position: relative;
+	display: inline-block;
+	width: 28%;
+	float: center;
+	height: 100%;
+}
+
+.PU {
+	height: 45%;
+	position: absolute;
+	margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+	cursor: pointer;
+}
+
+.r1c3 {
+	display: inline-block;
+	width: 34%;
+	float: right;
+	height: 100%;
+	position: relative;
+}
+
+.ATR {
+	height: 90%;
+	width: 100%;
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.row2 {
+	height: 25%;
+}
+
+.r2c1 {
+	display: inline-block;
+	width: 34%;
+	float: left;
+	height: 100%;
+	position: relative;
+}
+
+.PL {
+	height: 59%;
+	position: absolute;
+	margin: auto;
+    top: 0;
+    left: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+
+.r2c2 {
+	position: relative;
+	display: inline-block;
+	width: 28%;
+	float: center;
+	height: 100%;
+}
+
+.r2c2UPPER {
+	text-align: center;
+	width: 90%;
+	height: 50%;
+	background-color: cyan;
+	float: right;
+}
+
+.r2c2LOWER {
+	text-align: center;
+	width: 90%;
+	height: 50%;
+	background-color: yellow;
+	float: right;
+}
+
+.r2c3 {
+	display: inline-block;
+	width: 34%;
+	float: right;
+	height: 100%;
+	position: relative;
+}
+
+.PR {
+	height: 59%;
+	position: absolute;
+	margin: auto;
+    top: 0;
+    right: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+
+.row3 {
+	height: 33%;
+	text-align: center;
+}
+
+
+.r3c1 {
+	position: relative;
+	display: inline-block;
+	width: 35%;
+	float: left;
+	height: 100%;
+}
+
+.ABL {
+	height: 90%;
+	width: 100%;
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.r3c2 {
+	position: relative;
+	display: inline-block;
+	width: 28%;
+	float: center;
+	height: 100%;
+}
+
+.PD {
+	height: 45%;
+	position: absolute;
+	margin: auto;
+    left: 0;
+    right: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+
+.r3c3 {
+	position: relative;
+	display: inline-block;
+	width: 35%;
+	float: right;
+	height: 100%;
+}
+
+.ABR {
+	height: 90%;
+	width: 100%;
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#container #mapControls { position: fixed; bottom: 65px; right: 80px; width: 29px; }
 #container #mapControls #up { background: url(iconUp.png) no-repeat center top; display: block; height: 26px; width: 29px; }
 #container #mapControls #down { background: url(iconDown.png) no-repeat center top; display: block; height: 27px; width: 29px; }
