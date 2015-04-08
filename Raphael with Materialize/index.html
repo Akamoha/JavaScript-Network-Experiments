@@ -32,10 +32,29 @@
   </div>
   
   <ul id="slide-out" class="side-nav">
+	
+	<div class = "snapshotDropdown number1">
+		<select id="snapshot">
+			<option value="" disabled selected>Snapshot</option>
+			<option value="2013.01.01.0200">January</option>
+			<option value="2013.02.01.0200">February</option>
+			<option value="2013.03.01.0200">March</option>
+			<option value="2013.04.01.0200">April</option>
+			<option value="2013.05.01.0200">May</option>
+			<option value="2013.06.01.0200">June</option>
+			<option value="2013.07.01.0200">July</option>
+			<option value="2013.08.01.0200">August</option>
+			<option value="2013.09.01.0200">September</option>
+			<option value="2013.10.01.0200">October</option>
+			<option value="2013.11.01.0200">November</option>
+			<option value="2013.12.01.0200">December</option>
+		</select>
+	</div>
+			
 	<li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
-          <div class = "panel-element number1">
+          <div class = "panel-element">
 			  <a class="collapsible-header">Normal Graph</a>
 			  <div class="collapsible-body">
 				<div class="row">
@@ -53,7 +72,7 @@
 							</div>
 						</div>
 						<div class="row col s12">
-							<select>
+							<select id="edgetype">
 								<option value="" disabled selected>Edge Type</option>
 								<option value="1">Option 1</option>
 								<option value="2">Option 2</option>
@@ -142,6 +161,28 @@
 
   <div id = "container">
 	<div id="mapControls"><a id="up" href="javascript:;"></a><a id="down" href="javascript:;"></a></div>
+	<div class="nav-container">
+			<div class="row1">
+				<div class = "r1c1"><img class="ATL" src="icons/archTopLeft.png"/></div>
+				<div class = "r1c2"><img class="PU" src="icons/panUp.png"/></div>
+				<div class = "r1c3"><img class="ATR" src="icons/archTopRight.png"/></div>
+			</div>
+			
+			<div class="row2">
+				<div class = "r2c1"><img class="PL" src="icons/panLeft.png"/></div>
+				<div class = "r2c2">
+					<div class = "r2c2UPPER">+</div>
+					<div class = "r2c2LOWER">-</div>
+				</div>
+				<div class = "r2c3"><img class="PR" src="icons/panRight.png"/></div>
+			</div>
+			
+			<div class="row3">
+				<div class = "r3c1"><img class="ABL" src="icons/archBottomLeft.png"/></div>
+				<div class = "r3c2"><img class="PD" src="icons/panDown.png"/></div>
+				<div class = "r3c3"><img class="ABR" src="icons/archBottomRight.png"/></div>
+			</div>
+		</div>
   </div>
   
 </body>
