@@ -16,13 +16,33 @@ $(document).ready(function() {
     panZoom.enable();
     paper.safari();
 	
-	$("#container #up").click(function (e) {
+	$("#container .ZI").click(function (e) {
         panZoom.zoomIn(1);
         e.preventDefault();
     });
 
-    $("#container #down").click(function (e) {
+    $("#container .ZO").click(function (e) {
         panZoom.zoomOut(1);
+        e.preventDefault();
+    });
+	
+	$("#container .PU").click(function (e) {
+        panZoom.pan(0, 30);
+        e.preventDefault();
+    });
+	
+	$("#container .PL").click(function (e) {
+        panZoom.pan(30, 0);
+        e.preventDefault();
+    });
+	
+	$("#container .PD").click(function (e) {
+        panZoom.pan(0, -30);
+        e.preventDefault();
+    });
+	
+	$("#container .PR").click(function (e) {
+        panZoom.pan(-30, 0);
         e.preventDefault();
     });
 	
